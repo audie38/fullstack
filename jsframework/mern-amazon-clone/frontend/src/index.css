@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+a:hover {
+  color: #000;
+}
+
+.spinner-border {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: block;
+}
+
+.img-thumbnail {
+  width: 80px;
+}
