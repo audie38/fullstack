@@ -1,0 +1,7 @@
+a.nav-link.text-dark:hover {
+  color: #0d6efd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
