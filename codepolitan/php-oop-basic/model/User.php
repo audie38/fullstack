@@ -2,13 +2,27 @@
 
 class User
 {
-    var $firstName;
-    var $lastName;
-    var $userName;
+    // Visibility
+    public $firstName;
+    public $lastName;
+    public $userName;
+
+    protected $regId = 1001;
+    private $level = "user";
 
     // Method
-    function getFullName()
+    public function getFullName()
     {
         return $this->firstName . " " . $this->lastName;
+    }
+
+    protected function sayProtect()
+    {
+        return "This is Protected Method";
+    }
+
+    private function sayPrivate()
+    {
+        return "This is Private Method";
     }
 }

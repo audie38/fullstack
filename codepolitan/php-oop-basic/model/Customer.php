@@ -19,4 +19,10 @@ class Customer extends User
     {
         return $this->firstName . " " . $this->lastName . " (customer)";
     }
+
+    // Visibility - Encapsultaion
+    public function sayParent()
+    {
+        return $this->sayProtect();
+    }
 }
