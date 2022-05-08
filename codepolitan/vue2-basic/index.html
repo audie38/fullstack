@@ -110,7 +110,6 @@
             class="form-control mx2 text-left"
             v-model="maximum"
           />
-
           <input
             type="range"
             min="0"
@@ -120,35 +119,7 @@
             v-model="maximum"
           />
         </div>
-
-        <div class="row">
-          <div
-            v-if="item.price <= Number(maximum)"
-            class="col-md-3 col-sm-6 my-2"
-            v-for="(item, index) in products"
-            :key="index"
-          >
-            <div class="card mx-2">
-              <img
-                :src="item.image"
-                class="card-img-top img-fluid"
-                :alt="item.name"
-                loading="lazy"
-              />
-              <div class="card-body">
-                <h5 class="card-title">{{item.name}}</h5>
-                <p class="card-text">{{item.description}}</p>
-                <p class="card-text">{{item.price | currencyFormat}}</p>
-                <button
-                  v-on:click="addItem(item)"
-                  class="btn btn-primary w-100"
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <product-list :products="products" :maximum="maximum" @add="addItem" />
       </div>
     </div>
 
