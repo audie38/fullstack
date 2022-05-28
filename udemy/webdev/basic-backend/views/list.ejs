@@ -1,0 +1,39 @@
+<%- include("header") -%>
+    <div class="container my-5">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center"><%= kindOfDay %></h1>
+        </div>
+      </div>
+      <div class="card my-3 px-3 py-3">
+        <form action="/" method="post">
+          <div class="input-group px-3 py-3">
+            <input
+              name="newItem"
+              type="text"
+              class="form-control"
+              placeholder="Todolist Item"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn btn-primary" type="submit" id="button-addon2">
+              Add
+            </button>
+          </div>
+        </form>
+        <% if(listOfTodos.length > 0){ %>
+        <div class="my-3">
+            <div class="card mx-3">
+                <ul class="list-group list-group-flush">   
+                <% for(let i=0; i<listOfTodos.length; i++) {%>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="finished" id="finishedItem" />
+                        <p class="todoMark"><%= listOfTodos[i] %></p> 
+                    </li>
+                <% } %>
+                </ul>
+            </div>
+        </div>
+        <% }%>
+      </div>
+    </div>
+<%- include("footer") -%>
