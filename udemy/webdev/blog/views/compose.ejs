@@ -1,0 +1,32 @@
+<%- include("./partials/header") -%>
+
+<div class="container my-5">
+  <div class="card">
+    <form action="/" method="post" class="px-3 py-3">
+      <div class="mb-3">
+        <label for="blogTitleInput" class="form-label">Blog Title</label>
+        <input
+          name="blogTitle"
+          type="text"
+          class="form-control"
+          id="blogTitleInput"
+          aria-describedby="emailHelp"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="blogContent" class="form-label">Blog Content</label>
+        <textarea
+          name="blogContent"
+          class="form-control"
+          id="blogContent"
+          style="height: 250px"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-dark d-flex ms-auto">Publish</button>
+    </form>
+  </div>
+</div>
+
+<%- include("./partials/footer") -%>

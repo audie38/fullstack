@@ -1,0 +1,17 @@
+body {
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.customContainer {
+  position: relative;
+}
+
+.customButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

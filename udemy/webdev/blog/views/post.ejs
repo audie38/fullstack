@@ -1,0 +1,12 @@
+<%- include("./partials/header") -%>
+
+<div class="container my-5">
+  <% if(data.length < 1){ %>
+  <h1><%= pageHeader %></h1>
+  <%} else {%>
+  <h1 href="/"><%= data.title %></h1>
+  <p><%= data.content %></p>
+  <% } %>
+</div>
+
+<%- include("./partials/footer") -%>
