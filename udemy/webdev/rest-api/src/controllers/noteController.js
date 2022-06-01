@@ -3,7 +3,7 @@ const AsyncHandler = require("express-async-handler");
 const res = require("express/lib/response");
 
 const addNote = AsyncHandler(async (req, res) => {
-  const { title, tags, body } = req.payload;
+  const { title, tags, body } = req.body;
   const newNote = new Note({
     title: title,
     tags: tags,
@@ -27,7 +27,7 @@ const getAllNotes = AsyncHandler(async (req, res) => {
 const getNoteById = AsyncHandler(async (req, res) => {
   const note = await Note.findById(req.params.id);
   if (!note) {
-    res.status(404);
+    res.status(404).send("Notes Not Found");
     throw new Error("Notes Not Found");
   }
 
@@ -54,7 +54,7 @@ const updateNote = AsyncHandler(async (req, res) => {
 
   Note.findByIdAndUpdate(id, newData, (err) => {
     if (err) {
-      res.status(500).send(err);
+      res.status(500).send("Internal Server Error");
       throw new Error(err);
     }
     res.status(200).json(successResult);
