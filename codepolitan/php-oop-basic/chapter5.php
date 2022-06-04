@@ -15,5 +15,5 @@ echo "Senior: {$senior->total} <br/>";
 
 echo "Instance Count: " . Student::$instanceCount . "<br/>";
 
-$shirt = new Product("T-Shirt", "Blue");
+$shirt = new Product(["name" => "T-Shirt", "color" => "Blue", "price" => "299"]);
 echo json_encode($shirt);
