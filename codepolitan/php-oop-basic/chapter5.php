@@ -17,3 +17,6 @@ echo "Instance Count: " . Student::$instanceCount . "<br/>";
 
 $shirt = new Product(["name" => "T-Shirt", "color" => "Blue", "price" => "299"]);
 echo json_encode($shirt);
+echo "<br/>" . Product::$instanceCount;
+unset($shirt);
+echo "<br/>" . Product::$instanceCount;
