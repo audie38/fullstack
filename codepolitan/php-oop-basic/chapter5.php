@@ -20,3 +20,13 @@ echo json_encode($shirt);
 echo "<br/>" . Product::$instanceCount;
 unset($shirt);
 echo "<br/>" . Product::$instanceCount;
+
+function myAutoload($class)
+{
+    echo "Class {$class} undefined";
+}
+
+spl_autoload_register("myAutoload");
+
+echo "<br/>";
+// $cat = new Pet();
