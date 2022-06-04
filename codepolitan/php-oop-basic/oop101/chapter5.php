@@ -1,10 +1,10 @@
 <?php
 
-include("../model/part2/Student.php");
-include("../model/part2/Elementary.php");
-include("../model/part2/Junior.php");
-include("../model/part2/Senior.php");
-include("../model/part2/Product.php");
+include("./model/part2/Student.php");
+include("./model/part2/Elementary.php");
+include("./model/part2/Junior.php");
+include("./model/part2/Senior.php");
+include("./model/part2/Product.php");
 
 $elementary = new Elementary;
 echo "Elementary: {$elementary->total} <br/>";

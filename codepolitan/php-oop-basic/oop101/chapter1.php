@@ -1,6 +1,6 @@
 <?php
 
-include("../model/part1/Person.php");
+include("./model/part1/Person.php");
 
 // Object Instance
 $customer = new Person;
