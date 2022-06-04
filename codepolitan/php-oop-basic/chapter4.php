@@ -1,12 +1,12 @@
 <?php
 
-include("./model/Student.php");
-include("./model/PartTimeStudent.php");
-include("./model/Time.php");
-include("./model/Programmer.php");
-include("./model/AmateurProgrammer.php");
-include("./model/Image.php");
-include("./model/PhotoProfile.php");
+include("./model/part1/Student.php");
+include("./model/part1/PartTimeStudent.php");
+include("./model/part1/Time.php");
+include("./model/part1/Programmer.php");
+include("./model/part1/AmateurProgrammer.php");
+include("./model/part1/Image.php");
+include("./model/part1/PhotoProfile.php");
 
 
 echo Student::$grades[2] . "<br/>";
