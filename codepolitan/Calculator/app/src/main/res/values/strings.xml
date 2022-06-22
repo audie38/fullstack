@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="firstNum">First Number</string>
+    <string name="secondNum">Second Number</string>
+    <string name="plusSign">+</string>
+    <string name="minusSign">-</string>
+    <string name="multiplySign">X</string>
+    <string name="divideSign">/</string>
+    <string name="zero">0</string>
+    <string name="clearSign">C</string>
+</resources>
